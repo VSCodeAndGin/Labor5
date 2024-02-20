@@ -1,0 +1,46 @@
+.topic-selector {
+    margin-bottom: 20px;
+}
+
+.topic-layer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.topic-layer.active {
+    display: block;
+}
+
+.text-double-width {
+    width: 200%;
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+    .text-double-width {
+        width: auto;
+    }
+}
+
+.color-button {
+    background-color: #ccc;
+    /* Default button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.color-button:hover {
+    background-color: #555;
+    /* Hover color */
+}

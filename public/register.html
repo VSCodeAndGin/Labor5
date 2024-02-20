@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="register.js"></script>
+</head>
+
+<body>
+    <h2>Registrierung</h2>
+    <form action="#" method="post">
+        <label for="vorname">Vorname:</label><br>
+        <input type="text" id="vorname" name="vorname" pattern="[A-Za-z_-]{1,20}" required><br>
+
+        <label for="nachname">Nachname:</label><br>
+        <input type="text" id="nachname" name="nachname" pattern="[A-Za-z_-]{1,20}" required><br>
+
+        <label for="benutzername">Benutzername:</label><br>
+        <input type="text" id="benutzername" name="benutzername" pattern="[A-Za-z0-9_-]{1,20}" required><br>
+
+        <label for="passwort">Passwort:</label><br>
+        <input type="password" id="passwort" name="passwort" pattern="(?=.*\d)(?=.*[!#,+\-_?]).{8,}" required><br>
+
+        <label for="geschlecht">Geschlecht:</label><br>
+        <input type="radio" id="männlich" name="geschlecht" value="männlich" required>
+        <label for="männlich">Männlich</label><br>
+        <input type="radio" id="weiblich" name="geschlecht" value="weiblich">
+        <label for="weiblich">Weiblich</label><br>
+        <input type="radio" id="anderes" name="geschlecht" value="anderes">
+        <label for="anderes">Anderes</label><br>
+
+        <label for="interessen">Interessen:</label><br>
+        <select id="interessen" name="interessen" multiple>
+            <option value="sport">Sport</option>
+            <option value="musik">Musik</option>
+            <option value="kunst">Kunst</option>
+        </select><br>
+
+        <label for="kommentare">Kommentare:</label><br>
+        <textarea id="kommentare" name="kommentare" maxlength="100"></textarea><br>
+
+        <input type="checkbox" id="nutzungsbedingungen" name="nutzungsbedingungen" required>
+        <label for="nutzungsbedingungen">Ich akzeptiere die Nutzungsbedingungen</label><br>
+
+        <button type="button" id='register-button' onclick="validateRegistration()">Register</button>
+    </form>
+</body>
+
+</html>
